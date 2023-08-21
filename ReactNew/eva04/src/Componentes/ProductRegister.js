@@ -16,9 +16,9 @@ function ProductRegister() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name,
-          categoria,
-          price: parseFloat(price),
+          Nombre,
+          Apellido,
+          Edad: parseFloat(Edad),
         }),
       });
 
