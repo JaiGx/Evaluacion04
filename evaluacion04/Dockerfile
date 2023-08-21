@@ -5,10 +5,10 @@ FROM openjdk:17-alpine
 WORKDIR /app
 
 # Copiar el archivo JAR compilado al contenedor
-COPY target/demo-0.0.1-SNAPSHOT.jar /app/demo.jar
+COPY target/evaluacion04-0.0.1-SNAPSHOT.jar /app/evaluacion04.jar
 
 # Exponer el puerto en el que se ejecuta la aplicación Spring Boot
 EXPOSE 8080
 
 # Comando para ejecutar la aplicación
-CMD ["java", "-jar", "demo.jar"]
+CMD ["java", "-jar", "evaluacion04.jar"]
