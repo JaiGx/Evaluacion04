@@ -14,7 +14,7 @@ public class Evaluacion04Application {
 	}
 	@Configuration
     class CorsConfig implements WebMvcConfigurer {
-
+//,jh
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
