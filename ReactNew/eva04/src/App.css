@@ -1,9 +1,14 @@
-
+.fondo{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #7d90b6 !important;
+}
 .container{
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: #1f2a46 !important;
+  background-color: #7c8cb4 !important;
 }
 
 /* Estilos del encabezado */
@@ -65,7 +70,7 @@ body {
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;

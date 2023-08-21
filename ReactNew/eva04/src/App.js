@@ -4,10 +4,12 @@ import { Container, Nav } from 'react-bootstrap';
 import ProductList from './Componentes/ProductList';
 import ProductRegister from './Componentes/ProductRegister';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 function App() {
   return (
-<Router>
+    <Container className='fondo'>
+      <Router>
       <div className="App">
         <header className="App-header">
           <h1 className="h1">Evaluacion 04 MDLC</h1>
@@ -32,6 +34,9 @@ function App() {
         </Container>
       </div>
     </Router>
+
+    </Container>
+
   );
 }
 

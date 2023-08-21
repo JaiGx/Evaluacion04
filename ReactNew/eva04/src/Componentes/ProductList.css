@@ -1,4 +1,5 @@
 /* Estilos generales */
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f2f5; /* Fondo de página */
@@ -10,10 +11,13 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    background-color: white; /* Fondo de contenedor */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
   }
   
   /* Estilos de encabezado */
-  h2 {
+  h1, h2 {
     color: #1f2a46; /* Azul oscuro */
     margin-bottom: 1rem;
   }
@@ -31,43 +35,46 @@ body {
     background-color: #1f2a46; /* Azul oscuro */
     color: white;
     border: none;
-    padding: 0.75rem;
+    padding: 1rem;
     text-align: left;
   }
   
   .table tbody td {
     vertical-align: middle;
-    padding: 0.75rem;
+    padding: 1rem;
   }
   
   /* Estilos de botones */
+  .btn-primary, .btn-danger {
+    padding: 0.5rem 1rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  }
+  
   .btn-primary {
     background-color: #1f2a46; /* Azul oscuro */
     border-color: #1f2a46; /* Azul oscuro */
-    padding: 0.5rem 1rem;
     margin-right: 0.5rem;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.2s, border-color 0.2s;
   }
   
   .btn-primary:hover {
     background-color: #152035; /* Azul oscuro más oscuro */
     border-color: #152035; /* Azul oscuro más oscuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   .btn-danger {
     background-color: #e74c3c; /* Rojo */
     border-color: #e74c3c; /* Rojo */
-    padding: 0.5rem 1rem;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.2s, border-color 0.2s;
   }
   
   .btn-danger:hover {
     background-color: #c0392b; /* Rojo más oscuro */
     border-color: #c0392b; /* Rojo más oscuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   /* Estilos del modal */
