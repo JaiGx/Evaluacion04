@@ -18,7 +18,7 @@ public class Evaluacion04Application {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("https://jubilant-space-trout-vx77677w55426pj-3000.app.github.dev/")
+                .allowedOrigins("http://localhost:3000/","https://jubilant-space-trout-vx77677w55426pj-3000.app.github.dev/")
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowedHeaders("*")
                 .allowCredentials(true);

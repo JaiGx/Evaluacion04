@@ -1,0 +1,95 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5; /* Fondo de página */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  /* Estilos de encabezado */
+  h2 {
+    color: #1f2a46; /* Azul oscuro */
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilos de tabla */
+  .table {
+    border: 1px solid #dee2e6; /* Gris claro */
+    margin-top: 1rem;
+    background-color: white; /* Fondo de tabla */
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table thead th {
+    background-color: #1f2a46; /* Azul oscuro */
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  .table tbody td {
+    vertical-align: middle;
+    padding: 0.75rem;
+  }
+  
+  /* Estilos de botones */
+  .btn-primary {
+    background-color: #1f2a46; /* Azul oscuro */
+    border-color: #1f2a46; /* Azul oscuro */
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #152035; /* Azul oscuro más oscuro */
+    border-color: #152035; /* Azul oscuro más oscuro */
+  }
+  
+  .btn-danger {
+    background-color: #e74c3c; /* Rojo */
+    border-color: #e74c3c; /* Rojo */
+    padding: 0.5rem 1rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c0392b; /* Rojo más oscuro */
+    border-color: #c0392b; /* Rojo más oscuro */
+  }
+  
+  /* Estilos del modal */
+  .modal-content {
+    border-radius: 0.5rem;
+  }
+  
+  .modal-header {
+    background-color: #1f2a46; /* Azul oscuro */
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  
+  .modal-footer {
+    background-color: #f7f7f7; /* Gris claro */
+    border: none;
+    padding: 1rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+  
+  

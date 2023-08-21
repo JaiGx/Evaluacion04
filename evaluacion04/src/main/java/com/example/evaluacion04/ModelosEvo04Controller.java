@@ -49,9 +49,9 @@ public class ModelosEvo04Controller {
         List<ModelosEvo04> walmartList = new ArrayList<>();
         for (QueryDocumentSnapshot document : querySnapshot.getDocuments()) {
             String documentId = document.getId();
-            String Nombre = document.getString("Nombre");
-            String Apellido = document.getString("Apellido");
-            Double Edad = document.getDouble("Edad");
+            String Nombre = document.getString("nombre");
+            String Apellido = document.getString("apellido");
+            Double Edad = document.getDouble("edad");
 
             ModelosEvo04 ModelosEvo04 = new ModelosEvo04(documentId, Nombre, Apellido, Edad);
             walmartList.add(ModelosEvo04);
@@ -63,7 +63,7 @@ public class ModelosEvo04Controller {
     // Register
     @PostMapping("/register")
     public ModelosEvo04 registerItem(@RequestBody ModelosEvo04 newItem) throws InterruptedException, ExecutionException {
-        CollectionReference walmartCollection = firestore.collection("ModelosEvo04");
+        CollectionReference walmartCollection = firestore.collection("eva04");
         
         // Aquí podrías validar los campos del nuevo item antes de guardarlo
         
@@ -78,7 +78,7 @@ public class ModelosEvo04Controller {
     //editar producto
     @PutMapping("/update/{itemId}")
     public ModelosEvo04 updateProducto(@PathVariable String itemId, @RequestBody ModelosEvo04 updateProducto){
-        DocumentReference productoRef = firestore.collection("Walmart").document(itemId);
+        DocumentReference productoRef = firestore.collection("eva04").document(itemId);
         productoRef.set(updateProducto, SetOptions.merge()); //Actualiza documento con los nuevos datos
         return updateProducto;
     };
@@ -86,7 +86,7 @@ public class ModelosEvo04Controller {
     //delete producto
     @DeleteMapping("/delete/{itemId}")
     public void deleteProducto(@PathVariable String itemId){
-        DocumentReference productoRef = firestore.collection("ModelosEvo04").document(itemId);
+        DocumentReference productoRef = firestore.collection("eva04").document(itemId);
         productoRef.delete();
     } 
 

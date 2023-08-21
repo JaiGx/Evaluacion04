@@ -7,26 +7,30 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <Router>
-      <Container>
-        <h1>Mi Proyecto de React</h1>
-        <Nav variant="tabs" defaultActiveKey="/list">
-          <Nav.Item>
-            <
-Nav.Link
- as={Link} to="/list">Listar</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <
-Nav.Link
- as={Link} to="/register">Registrar</Nav.Link>
-          </Nav.Item>
-        </Nav>
-        <Routes> {/* Utiliza el componente "Routes" */}
-          <Route path="/list" element={<ProductList />} />
-          <Route path="/register" element={<ProductRegister />} />
-        </Routes>
-      </Container>
+<Router>
+      <div className="App">
+        <header className="App-header">
+          <h1 className="h1">Evaluacion 04 MDLC</h1>
+          <Nav variant="tabs" defaultActiveKey="/list" className="nav">
+            <Nav.Item>
+              <Nav.Link as={Link} to="/list" className="nav-link">
+                Listar
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link as={Link} to="/register" className="nav-link">
+                Registrar
+              </Nav.Link>
+            </Nav.Item>
+          </Nav>
+        </header>
+        <Container className="container">
+          <Routes className="routes">
+            <Route path="/list" element={<ProductList />} />
+            <Route path="/register" element={<ProductRegister />} />
+          </Routes>
+        </Container>
+      </div>
     </Router>
   );
 }

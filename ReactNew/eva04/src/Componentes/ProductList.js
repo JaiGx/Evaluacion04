@@ -3,6 +3,8 @@ import { Modal, Button } from 'react-bootstrap';
 import $ from 'jquery';
 import 'datatables.net-bs5';
 import 'datatables.net-bs5/css/dataTables.bootstrap5.min.css';
+import './ProductList.css';
+
 
 function ProductList() {
   const [products, setProducts] = useState([]);
@@ -14,7 +16,7 @@ function ProductList() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch('https://jubilant-space-trout-vx77677w55426pj-8080.app.github.dev/api/ModelosEvo04/getAll');
+        const response = await fetch('http://localhost:8080/api/ModelosEvo04/getAll');
         const data = await response.json();
         setProducts(data);
       } catch (error) {
@@ -30,11 +32,10 @@ function ProductList() {
       $('#productTable').DataTable({
         data: products,
         columns: [
-          { title: 'Nombre', data: 'Nombre' },
-          { title: 'Apellido', data: 'Apellido' },
-          { title: 'Edad', data: 'Edad' },
-          {
-            title: 'Acciones',
+          { title: 'Nombre', data: 'nombre' },
+          { title: 'Apellido', data: 'apellido' },
+          { title: 'Edad', data: 'edad' },
+          {title: 'Acciones',
             data: null,
             createdCell: (cell, cellData, rowData) => {
               const editButton = document.createElement('button');
@@ -73,9 +74,7 @@ rowData.id
 
   const handleEditSave = async () => {
     try {
-      const response = await fetch(`https://test1-sv0s.onrender.com/api/walmart/update/${
-selectedItem.id
-}`, {
+      const response = await fetch(`http://localhost:8080/api/ModelosEvo04/update/${selectedItem.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -95,11 +94,11 @@ selectedItem.id
     }
   };
 
-  const handleDelete = async (itemId) => {
+  const handleDelete = async (id) => {
     const confirmDelete = window.confirm('¿Está seguro de que desea eliminar este ítem?');
     if (confirmDelete) {
       try {
-        const response = await fetch(`https://test1-sv0s.onrender.com/api/walmart/delete/${itemId}`, {
+        const response = await fetch(`http://localhost:8080/api/ModelosEvo04/delete/${id}`, {
           method: 'DELETE',
         });
 
@@ -124,6 +123,7 @@ selectedItem.id
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Edad</th>
+            <th>Acciones</th>
           </tr>
         </thead>
       </table>
@@ -135,20 +135,23 @@ selectedItem.id
         </Modal.Header>
         <Modal.Body>
           {/* Formulario para editar el ítem */}
+          <h2>Nombre</h2>
           <input
             type="text"
-            value={selectedItem?.name || ''}
-            onChange={(e) => setSelectedItem({ ...selectedItem, name: e.target.value })}
+            value={selectedItem?.nombre || ''}
+            onChange={(e) => setSelectedItem({ ...selectedItem, nombre: e.target.value })}
           />
+          <h2>Apellido</h2>
           <input
             type="text"
-            value={selectedItem?.categoria || ''}
-            onChange={(e) => setSelectedItem({ ...selectedItem, categoria: e.target.value })}
+            value={selectedItem?.apellido || ''}
+            onChange={(e) => setSelectedItem({ ...selectedItem, apellido: e.target.value })}
           />
+          <h2>Edad</h2>
           <input
             type="number"
-            value={selectedItem?.price || ''}
-            onChange={(e) => setSelectedItem({ ...selectedItem, price: parseFloat(e.target.value) })}
+            value={selectedItem?.edad || ''}
+            onChange={(e) => setSelectedItem({ ...selectedItem, edad: parseFloat(e.target.value) })}
           />
         </Modal.Body>
         <Modal.Footer>
