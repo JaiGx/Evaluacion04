@@ -30,9 +30,9 @@ function ProductList() {
       $('#productTable').DataTable({
         data: products,
         columns: [
-          { title: 'Nombre', data: 'name' },
-          { title: 'Categoría', data: 'categoria' },
-          { title: 'Precio', data: 'price' },
+          { title: 'Nombre', data: 'Nombre' },
+          { title: 'Apellido', data: 'Apellido' },
+          { title: 'Edad', data: 'Edad' },
           {
             title: 'Acciones',
             data: null,
@@ -122,9 +122,8 @@ selectedItem.id
         <thead>
           <tr>
             <th>Nombre</th>
-            <th>Categoría</th>
-            <th>Precio</th>
-            <th>Acciones</th>
+            <th>Apellido</th>
+            <th>Edad</th>
           </tr>
         </thead>
       </table>
