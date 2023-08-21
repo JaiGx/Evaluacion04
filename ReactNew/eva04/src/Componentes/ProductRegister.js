@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 //import '../styles/ProductRegister.css';
 
 function ProductRegister() {
-  const [name, setName] = useState('');
-  const [categoria, setCategoria] = useState('');
-  const [price, setPrice] = useState('');
+  const [Nombre, setName] = useState('');
+  const [Apellido, setCategoria] = useState('');
+  const [Edad, setPrice] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -39,15 +39,15 @@ function ProductRegister() {
     <form onSubmit={handleSubmit}>
       <div className="form-group">
         <label>Nombre:</label>
-        <input type="text" className="form-control" value={name} onChange={(e) => setName(e.target.value)} />
+        <input type="text" className="form-control" value={Nombre} onChange={(e) => setName(e.target.value)} />
       </div>
       <div className="form-group">
-        <label>Categoría:</label>
-        <input type="text" className="form-control" value={categoria} onChange={(e) => setCategoria(e.target.value)} />
+        <label>Apellido:</label>
+        <input type="text" className="form-control" value={Apellido} onChange={(e) => setCategoria(e.target.value)} />
       </div>
       <div className="form-group">
-        <label>Precio:</label>
-        <input type="text" className="form-control" value={price} onChange={(e) => setPrice(e.target.value)} />
+        <label>Edad:</label>
+        <input type="text" className="form-control" value={Edad} onChange={(e) => setPrice(e.target.value)} />
       </div>
       <button type="submit" className="btn btn-primary">Registrar</button>
     </form>
